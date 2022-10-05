@@ -1,0 +1,48 @@
+body{
+    width: 60%;
+    margin: 0% 20%;
+}
+
+#goBack{
+    position: fixed;
+    top: 1;
+    right:0;
+}
+
+h3, .messages li{
+    color: red;
+}
+
+form{
+    /* height: 260px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:  1%;
+}
+table, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+td a {
+    margin: 2px 5px;
+}
+#netowrkDate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit{
+width: 50%;
+margin: 0% 25%;
+}

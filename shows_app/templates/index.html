@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{%static 'js/script.js' %}"></script>
+</head>
+<body>
+    <h1>Login and Registration</h1>
+    <h2>Register Page</h2>
+    <form action="/logreg" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name">
+        </div>
+        <div class="row">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name">
+        </div>
+        <div  class="row">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div class="row">
+            <label for="password">Password</label>
+            <input type="text" name="password">
+        </div class="row">
+        <div>
+            <input type="submit" name="register" value="Register">
+        </div class="row">
+        <input type="hidden" name="logreg" value="reg">
+    </form>
+
+
+    <h2>Login Page</h2>
+    <form action="/logreg" method="post">
+        {% csrf_token %}
+        <div  class="row">
+            <label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div class="row">
+            <label for="password">Password</label>
+            <input type="text" name="password">
+        </div class="row">
+        <div>
+            <input type="submit" name="login" value="Log In">
+        </div class="row">
+        <input type="hidden" name="logreg" value="log">
+    </form>
+
+
+</body>
+</html>
